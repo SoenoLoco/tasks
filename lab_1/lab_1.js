@@ -12,7 +12,10 @@ console.log(resultText);
 // //задание 2
 let myInfoText = `Всем привет! Меня зовут, ${myName}. Сейчас я изучаю язык программирования ${programmingLanguage} на курсе по ${programmingLanguage} у ${courseCreatorName}. Я хочу стать веб-разработчиком, потому что ${reasonText}. До этого я изучала ${programmingLanguage} ${numberOfMonth} месяцев. Я уверена, что пройду данный курс до конца!`;
 
-myInfoText = myInfoText.replaceAll("JavaScript", "JAVASCRIPT");
+myInfoText = myInfoText.replaceAll(
+  "JavaScript",
+  programmingLanguage.toLocaleUpperCase(),
+);
 
 console.log(myInfoText);
 console.log("Длина строки:", myInfoText.length);
