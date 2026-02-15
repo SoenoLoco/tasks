@@ -7,9 +7,11 @@ const getName2 = function (name) {
   return `Имя равно ${name}`;
 };
 
-const getName3 = (name) => {
+const getName3 = name => {
   return `Имя равно ${name}`;
 };
+
+
 
 console.log(getName1("Надежда"));
 console.log(getName2("Катерина"));
