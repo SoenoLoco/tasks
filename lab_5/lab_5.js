@@ -22,6 +22,8 @@
 
 // alert(`Сейчас в онлайн следующие пользователи: ${userOnlineName}`);
 
+
+
 // //задание 2
 // function giveTalonsInOrder(patiens, order) {
 //   const patiensMap = {};
@@ -48,6 +50,9 @@
 // const result = giveTalonsInOrder(people, orderArr);
 // console.log("result", result);
 
+
+
+
 // //задание 3
 // function handleObject(obj, key, action) {
 //   const newObj = { ...obj };
@@ -73,6 +78,9 @@
 // const result = handleObject(student, "programmingLanguage", "delete");
 // console.log("result", result);
 
+
+
+
 // //задание 4
 // function giveJobStudent(student, jobName) {
 //   const updatedStudent = {
@@ -92,6 +100,9 @@
 //   stack: ["HTML", "CSS", "JavaScript", "React"],
 // };
 // const updatedStudent = giveJobStudent(student, "веб-разработчик");
+
+
+
 
 // //задание 5
 // const groceries = {
@@ -126,6 +137,8 @@
 // ];
 // const totalPrice = getTotalpriceOfShoppingBag(shoppingBag);
 // console.log("totalPrice", totalPrice);
+
+
 
 // задание 7
 function getKiller(suspectInfo, deadPeople) {
