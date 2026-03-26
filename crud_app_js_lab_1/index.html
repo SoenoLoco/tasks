@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📋 Менеджер задач</h1>
+
+      <!-- Форма добавления/редактирования -->
+      <form id="task-form">
+        <input
+          type="text"
+          id="task-title"
+          placeholder="Название задачи"
+          required
+        />
+        <input type="text" id="task-desc" placeholder="Описание">
+        <select id="task-priority">
+          <option value="low">Низкий</option>
+          <option value="medium" selected>Средний</option>
+          <option value="high">Высокий</option>
+        </select>
+        <button type="submit" id="submit-btn">Добавить</button>
+      </form>
+
+      <!-- Поиск по названию -->
+       <div class="search-name">
+        <input type="search" id="search-input" placeholder="Поиск по названию" autocomplete="off">
+       </div>
+
+      <!-- Фильтрация -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="active">Активные</button>
+        <button class="filter-btn" data-filter="completed">Завершённые</button>
+      </div>
+
+      <!-- Счётчик задач -->
+       <div class="counters" id="task-counters">
+        Всего: <span id="total-count">0</span> |
+        Активных: <span id="active-count">0</span> |
+        Завершённых: <span id="completed-count">0</span>
+       </div>
+
+       <!-- Сортировка -->
+        <div class="sort-section">
+            <label>Сортировка:</label>
+            <select id="sort-select">
+                <option value="newest">Новые сначала</option>
+                <option value="oldest">Старые сначала</option>
+                <option value="priority-high">По приоритету (высокий -> низкий)</option>
+                <option value="priority-low">По приоритету (низкий -> высокий)</option>
+            </select>
+        </div>
+
+      <!-- Список задач -->
+      <div id="task-list"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
