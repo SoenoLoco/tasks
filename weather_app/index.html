@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="app-header">
+        <h1>Погодное приложение(Weather App)</h1>
+      </header>
+
+      <div class="search-section">
+        <div class="search-container">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Введите город"
+            class="search-input"
+          />
+          <button id="search-btn" class="search-btn">Найти</button>
+          <button id="location-btn" class="location-btn">
+            Моё местоположение
+          </button>
+        </div>
+      </div>
+
+      <div id="error-message" class="error-message" style="display: none"></div>
+
+      <div id="skeleton-loader" class="skeleton-loader" style="display: none">
+        <div class="skeleton-header"></div>
+        <div class="skeleton-temp"></div>
+        <div class="skeleton-details"></div>
+      </div>
+
+      <main id="main-content">
+        <div class="weather-card" id="weather-card">
+          <div class="weather-header">
+            <h2 id="city-name">--</h2>
+            <img
+              id="weather-icon"
+              class="weather-icon"
+              src=""
+              alt="иконка погоды"
+            />
+            <div class="unit-toggle">
+              <button id="unit-celsius" class="unit-btn active">°C</button>
+              <button id="unit-fahrenheit" class="unit-btn">°F</button>
+            </div>
+          </div>
+
+          <div class="weather-main">
+            <div class="temp-container">
+              <div class="temperature" id="temperature">--°C</div>
+              <div class="feels-like" id="feels-like">Ощущается как --°C</div>
+            </div>
+          </div>
+
+          <div class="weather-description" id="description">--</div>
+
+          <div class="weather-details">
+            <div class="detail-item">
+              <span class="detail-label">Влажность</span>
+              <span class="detail-value" id="humidity">--%</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Ветер</span>
+              <span class="detail-value" id="wind">-- м/с</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Давление</span>
+              <span class="detail-value" id="pressure">-- мм рт. ст.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast-section">
+          <h3>Прогноз на 5 дней</h3>
+          <div class="forecast-container" id="forecast-container"></div>
+        </div>
+
+        <div class="favorites-section">
+          <h3>Избранные города</h3>
+          <div class="favorites-container" id="favorites-container"></div>
+        </div>
+      </main>
+    </div>
+
+    <template id="forecast-card-template">
+      <div class="forecast-card">
+        <div class="forecast-date"></div>
+        <img class="forecast-icon" src="" alt="" />
+        <div class="forecast-temp"></div>
+      </div>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>

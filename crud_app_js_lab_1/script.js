@@ -47,6 +47,7 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
+  //получение задач из хранилища
   const tasks = getTasks();
 
   if (editingTaskId) {
@@ -83,7 +84,7 @@ const taskList = document.getElementById("task-list");
 function renderTasks() {
   let tasks = getTasks();
 
-  // Применяем фильтр
+  // Применяем фильтр(незавершенная/завершенная)
   if (currentFilter === "active") {
     tasks = tasks.filter((t) => !t.completed);
   } else if (currentFilter === "completed") {
